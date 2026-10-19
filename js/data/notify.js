@@ -5,7 +5,7 @@
    cal : off(오늘=0), pick(그날 일정 중 몇 번째, 0부터)  → 캘린더 데이터에서 제목/시각을 가져옴
    hq  : title, body, mission(본부 앱의 임무 목록에 추가될 임무)  */
 CHAR.apps.notify = { timeline: [
-  { after: 25,  app:'line', from:'아마리니 카와이', text:'선배 어디예요?? 저 벌써 도착했어요!' },
+  { after: 25,  app:'line', from:'아마리니 카와이', text:'시렌쨩 어디? 나 벌써 도착했어!' },
   { after: 60,  app:'msg',  from:'쿠로', text:'......누나 언제 와?' },
   { after: 95,  app:'cal',  off:0, pick:1 },
   { after: 130, app:'line', from:'야사이 키노코', chat:'트라이아스 마법소녀', text:'다들 내일 임무 장소 공지 봤어용?? 시부야!!!' },
