@@ -6,12 +6,12 @@ registerApp('x',()=>`<div class="page xx" id="p-x">
    <h2>계약 일자</h2>
    <p class="x-name">히도이 시렌 樋道井しれん - 15세</p>
    <p>위 당사자와 ■■(통칭 “마스코트”라 함)은 다음과 같이 마법소녀 계약을 체결한다.</p>
-   <p class="x-gap">계약일 : XXXX..</p>
+   <p class="x-gap">계약일 : XXXX.XX.XX</p>
    <p>■■ ■■■■■■■■ ■■■■■</p>
    <p>■■■■ ?</p>
    <p>■■■■■ ■■■■■</p>
    <p class="x-gap x-reward">보상 : 모두의 기억에서 나를 지우는 것</p>
-   <p class="x-date">XXXX년 월 일</p>
+   <p class="x-date">XXXX년 X월 X일</p>
    <p class="x-seal"><span>(인)</span></p>
   </div>
   <button class="x-wish" data-xwish>소원 이루기</button>
