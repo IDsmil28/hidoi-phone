@@ -1,0 +1,23 @@
+/* 유튜브 앱 (메인 화면만) */
+.yt-top{position:absolute;top:0;left:0;right:0;height:104px;padding:58px 14px 0;display:flex;justify-content:space-between;align-items:center;z-index:5;background:var(--bg)}
+.yt-top h1{font-size:22px;font-weight:700;letter-spacing:-.03em}
+.yt-ic{display:flex;gap:20px}
+.yt-ic svg{width:25px;height:25px;fill:none;stroke:var(--fg);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.yt-chips{display:flex;gap:8px;padding:2px 12px 12px;overflow-x:auto;scrollbar-width:none}
+.yt-chips::-webkit-scrollbar{display:none}
+.yt-chips span{flex:none;padding:7px 12px;border-radius:9px;background:var(--fill);font-size:14px;font-weight:500;white-space:nowrap}
+.yt-chips span.on{background:var(--fg);color:var(--bg)}
+.yt-v{margin-bottom:18px;cursor:pointer}
+.yt-th{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#2c3a4a,#1a1f28);overflow:hidden;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:15px;font-weight:600}
+.yt-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.yt-th em{position:absolute;right:8px;bottom:8px;padding:2px 5px;border-radius:5px;background:rgba(0,0,0,.8);color:#fff;font-size:12px;font-weight:600;font-style:normal}
+.yt-m{display:flex;gap:11px;padding:10px 12px 0}
+.yt-m .av{width:38px;height:38px;font-size:15px}
+.yt-m b{display:block;font-size:15px;font-weight:500;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.yt-m small{display:block;font-size:12.5px;color:var(--fg2);margin-top:3px}
+.yt-m svg{width:18px;height:18px;fill:var(--fg);flex:none;margin-top:2px;margin-left:auto}
+.yt-tabs{position:absolute;bottom:0;left:0;right:0;height:88px;padding-top:8px;display:flex;justify-content:space-around;background:var(--bg);border-top:.5px solid var(--sep);z-index:6;font-size:10px;color:var(--fg)}
+.yt-tabs>div{display:flex;flex-direction:column;align-items:center;gap:3px;width:60px}
+.yt-tabs svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.yt-tabs .pl svg{width:34px;height:34px;stroke-width:1.4}
+.yt-tabs .on svg{fill:currentColor}

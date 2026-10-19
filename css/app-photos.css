@@ -1,0 +1,27 @@
+/* 사진 앱 (iOS 26: 전체 화면 보관함 + 떠 있는 탭) */
+.pview2{position:absolute;inset:0;display:none}.pview2.on{display:block}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:0 0 200px}
+.pt{position:relative;aspect-ratio:1;background-size:cover;background-position:center;cursor:pointer;overflow:hidden}
+.pt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pt .fv{position:absolute;left:5px;bottom:4px;width:15px;height:15px;fill:#fff;filter:drop-shadow(0 0 2px rgba(0,0,0,.5))}
+.phh{position:absolute;top:0;left:0;right:0;height:112px;padding:62px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;z-index:5;pointer-events:none;background:linear-gradient(rgba(0,0,0,.55),transparent)}
+#phone:not(.dark) .phh{background:linear-gradient(rgba(255,255,255,.85),transparent)}
+.phh>*{pointer-events:auto}
+.phh h1{font-size:30px;font-weight:700;letter-spacing:.2px;color:var(--fg);padding-top:2px}
+.phh .nr{display:flex;gap:10px}
+.pseg{position:absolute;left:50%;transform:translateX(-50%);bottom:100px;display:flex;padding:3px;border-radius:19px;background:var(--gbg);border:.5px solid var(--gbd);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);z-index:6;font-size:13px;font-weight:600}
+.pseg span{padding:6px 17px;border-radius:16px;color:var(--fg);cursor:pointer}
+.pseg .on{background:var(--fill2)}
+.albs{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px;padding:0 16px 200px}
+.alb div.cv{aspect-ratio:1;border-radius:14px;background-size:cover;background-position:center;background-color:var(--fill2);overflow:hidden;position:relative}
+.alb div.cv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.alb b{display:block;font-size:16px;font-weight:500;margin-top:6px;color:var(--fg)}.alb small{font-size:15px;color:var(--fg2)}
+.vwr{background:#000;color:#fff}
+.vstrip{position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.vstrip::-webkit-scrollbar{display:none}
+.vs{flex:none;width:100%;height:100%;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;background-size:contain;background-position:center;background-repeat:no-repeat;position:relative}
+.vs img{width:100%;height:100%;object-fit:contain}
+.vwr .nav{background:linear-gradient(rgba(0,0,0,.6),transparent);color:#fff}
+.vwr .ntitle{color:#fff;flex-direction:column;justify-content:center;line-height:1.15;font-size:15px}.vwr .ntitle small{font-size:11px;font-weight:400;opacity:.7}
+.vbar{position:absolute;bottom:34px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.vbar .gb{background:rgba(40,40,44,.7);color:#fff;border-color:rgba(255,255,255,.1)}

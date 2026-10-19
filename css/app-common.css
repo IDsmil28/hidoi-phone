@@ -1,0 +1,40 @@
+/* 앱 공통: 앱 틀, 페이지 전환, 상단 버튼(유리), 큰 제목, 하단 탭, 카드 */
+#app{z-index:30;background:var(--bg);color:var(--fg);transform:scale(.16);opacity:0;border-radius:44px;pointer-events:none;overflow:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .25s,border-radius .45s}
+#app.open{transform:none;opacity:1;border-radius:0;pointer-events:auto}
+.page{isolation:isolate;position:absolute;inset:0;background:var(--bg);overflow:hidden;visibility:visible;transition:transform .38s cubic-bezier(.3,.8,.3,1),visibility 0s;color:var(--fg)}
+.page.gray{background:var(--bg2)}
+.page.right{transform:translateX(100%);visibility:hidden;transition:transform .38s cubic-bezier(.3,.8,.3,1),visibility 0s .38s}
+.scroll{position:absolute;inset:0;overflow-y:auto;padding:100px 0 120px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.scroll::-webkit-scrollbar{display:none}
+
+/* 상단 바 (iOS 26: 투명 + 떠 있는 유리 버튼) */
+.nav{position:absolute;top:0;left:0;right:0;height:112px;padding:60px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;z-index:5;pointer-events:none;color:var(--blue);font-size:17px;background:linear-gradient(var(--bg) 55%,transparent)}
+.page.gray .nav{background:linear-gradient(var(--bg2) 55%,transparent)}
+.nav>*{pointer-events:auto}
+.nav .nr{display:flex;gap:10px;align-items:center}
+.ntitle{position:absolute;left:50%;top:60px;transform:translateX(-50%);height:41px;display:flex;align-items:center;font-size:17px;font-weight:600;color:var(--fg);pointer-events:none;white-space:nowrap;z-index:6}
+.gb{gap:6px;display:inline-flex;align-items:center;justify-content:center;height:41px;min-width:41px;padding:0 17px;border-radius:21px;background:var(--gbg);border:.5px solid var(--gbd);color:var(--fg);font-size:16px;font-weight:500;backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);cursor:pointer;transition:transform .12s,background .15s;flex:none}
+.gb:active{transform:scale(.93)}
+.gb.round{width:41px;padding:0}
+.gb svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.gb.back svg{width:11px;height:19px}
+.gb.y{color:#e6a800}
+.big{font-size:34px;font-weight:700;letter-spacing:.3px;padding:6px 16px 8px;color:var(--fg)}
+.sbar{margin:0 16px 10px;height:36px;border-radius:12px;background:var(--fill);color:var(--fg2);display:flex;gap:6px;align-items:center;padding:0 9px;font-size:17px}
+.card{background:var(--card);border-radius:20px;margin:0 16px 16px;overflow:hidden}
+.y{color:#e6a800}
+.av{position:relative;overflow:hidden;width:50px;height:50px;border-radius:50%;background:linear-gradient(var(--avA),var(--avB));color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none;font-size:21px;overflow:hidden;white-space:nowrap}
+.av svg{width:62%;height:62%;fill:#fff}
+.av.s{margin:0 auto}
+.sep{height:.5px;background:var(--sep)}
+
+/* 하단 떠 있는 탭 (전화, 사진 공용) */
+.ftabs{position:absolute;left:20px;right:27px;bottom:30px;height:58px;display:flex;gap:7px;z-index:6;pointer-events:none}
+.ftabs>*{pointer-events:auto}
+.ftp{flex:1;display:flex;padding:3px;border-radius:29px;background:var(--gbg);border:.5px solid var(--gbd);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5)}
+.ftp>div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:26px;font-size:10.5px;font-weight:500;color:var(--fg);cursor:pointer}
+.ftp>div.on{background:var(--fill2);color:var(--blue)}
+.ftp svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ftabs .gb.round{width:58px;height:58px;border-radius:29px}
+
+.pf{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}

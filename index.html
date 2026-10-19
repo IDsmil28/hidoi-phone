@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<title>히도이 시렌</title>
+<meta name="description" content="히도이 시렌의 휴대폰">
+<meta property="og:title" content="히도이 시렌의 휴대폰">
+<meta property="og:description" content="휴대폰을 열어보세요.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/lock.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/control.css">
+<link rel="stylesheet" href="css/app-common.css">
+<link rel="stylesheet" href="css/app-messages.css">
+<link rel="stylesheet" href="css/app-notes.css">
+<link rel="stylesheet" href="css/app-safari.css">
+<link rel="stylesheet" href="css/app-phone.css">
+<link rel="stylesheet" href="css/app-photos.css">
+<link rel="stylesheet" href="css/app-music.css">
+<link rel="stylesheet" href="css/app-calendar.css">
+<link rel="stylesheet" href="css/app-youtube.css">
+<link rel="stylesheet" href="css/app-line.css">
+<link rel="stylesheet" href="css/app-stub.css">
+<link rel="stylesheet" href="css/app-hq.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="gG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#67f07c"/><stop offset="1" stop-color="#0bba2a"/></linearGradient>
+<linearGradient id="gR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fc5c7d"/><stop offset="1" stop-color="#f6233c"/></linearGradient>
+<linearGradient id="gY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8e8e93"/><stop offset="1" stop-color="#48484c"/></linearGradient>
+<linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fb4ff"/><stop offset="1" stop-color="#0a64e8"/></linearGradient>
+<linearGradient id="gP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a6ae0"/><stop offset="1" stop-color="#5a3aa8"/></linearGradient>
+<linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f7be8"/><stop offset="1" stop-color="#4650c4"/></linearGradient>
+<linearGradient id="gH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff86cc"/><stop offset="1" stop-color="#7a4cff"/></linearGradient>
+</defs></svg>
+
+<div id="device">
+<div class="sbtn ac"></div><div class="sbtn v1"></div><div class="sbtn v2"></div><div class="sbtn pw" id="pwbtn" title="화면 잠금/깨우기"></div>
+<div id="phone" class="lk">
+  <div class="wall"></div>
+  <div class="island"></div>
+  <div class="status" id="status">
+    <span class="sl"><b id="carrier">SoftBank</b><b id="clock">9:41</b><svg class="bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 019-5.200M18 11v6l1.500 2h-15M10 21h4M3 3l18 18"/></svg></span>
+    <span class="si">
+      <svg class="plane" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15.500l-8-4.500V5.500a1.500 1.500 0 00-3 0V11l-8 4.500V18l8-2.200V19l-2.500 1.800V22.500l4-1 4 1v-1.700L13 19v-3.200l8 2.200z"/></svg>
+      <svg class="sig" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.500" width="3" height="6.500" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg class="wifi" viewBox="0 0 17 12"><path d="M1.500 4.200a10 10 0 0114 0M4 6.800a6.500 6.500 0 019 0M6.400 9.300a3 3 0 014.200 0" stroke="currentColor" stroke-width="1.700" fill="none" stroke-linecap="round"/><circle cx="8.500" cy="11" r="1" fill="currentColor"/></svg>
+      <svg class="bat" viewBox="0 0 27 13" style="height:13px"><rect x=".5" y=".5" width="23" height="12" rx="3.800" fill="none" stroke="currentColor" opacity=".4"/><rect id="batf" x="2" y="2" width="17" height="9" rx="2.500" fill="currentColor"/><path d="M25 4.500v4c.8-.3 1.500-1.100 1.500-2s-.7-1.700-1.500-2z" fill="currentColor" opacity=".45"/></svg>
+    </span>
+  </div>
+
+  <div class="screen locked" id="home">
+    <div id="grid"></div>
+    <div id="srch"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.500" stroke-linecap="round"><circle cx="10.500" cy="10.500" r="6.500"/><path d="M16 16l5 5"/></svg>검색</div>
+    <div id="dock"></div>
+  </div>
+
+  <div class="screen" id="app"></div>
+
+  <div class="screen" id="lock">
+    <svg class="lico" width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="2" y="9" width="12" height="9" rx="2.500" fill="#fff"/><path d="M4.500 9V6a3.500 3.500 0 017 0v3"/></svg>
+    <div id="ldate"></div>
+    <div id="ltime"></div>
+    <div id="lwg"></div>
+    <div id="nstack"></div>
+    <div class="qb l" id="qflash"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 2h8l-1.500 6h-5zM9 9h6l.5 3c0 1-.8 1.500-1.500 2v7a2 2 0 01-4 0v-7c-.7-.5-1.500-1-1.500-2z"/></svg></div>
+    <div class="qb r" id="qcam"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 8h3l1.500-2.500h7L17 8h3v11H4z" stroke-linejoin="round"/><circle cx="12" cy="13.500" r="3.500"/></svg></div>
+    <div class="hint">위로 스와이프하여 열기</div>
+  </div>
+
+  <div id="cc"></div>
+  <div id="dim"></div>
+  <div class="hbar" id="hbar"></div>
+</div>
+</div>
+
+<script src="js/data/base.js"></script>
+<script src="js/data/profiles.js"></script>
+<script src="js/data/messages.js"></script>
+<script src="js/data/notes.js"></script>
+<script src="js/data/safari.js"></script>
+<script src="js/data/phone.js"></script>
+<script src="js/data/line.js"></script>
+<script src="js/data/photos.js"></script>
+<script src="js/data/calendar.js"></script>
+<script src="js/data/music.js"></script>
+<script src="js/data/youtube.js"></script>
+<script src="js/data/hq.js"></script>
+<script src="js/data/notify.js"></script>
+<script src="js/core.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/player.js"></script>
+<script src="js/apps/messages.js"></script>
+<script src="js/apps/notes.js"></script>
+<script src="js/apps/safari.js"></script>
+<script src="js/apps/phone.js"></script>
+<script src="js/apps/line.js"></script>
+<script src="js/apps/photos.js"></script>
+<script src="js/apps/music.js"></script>
+<script src="js/apps/calendar.js"></script>
+<script src="js/apps/youtube.js"></script>
+<script src="js/apps/hq.js"></script>
+<script src="js/apps/unknown.js"></script>
+<script src="js/system/clock.js"></script>
+<script src="js/system/home.js"></script>
+<script src="js/system/lock.js"></script>
+<script src="js/system/control.js"></script>
+<script src="js/system/host.js"></script>
+<script src="js/system/gestures.js"></script>
+<script src="js/system/notify.js"></script>
+</body>
+</html>

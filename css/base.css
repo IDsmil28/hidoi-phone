@@ -1,0 +1,46 @@
+/* 기본: 리셋, 기기 틀, 테마 색, 상태바, 다이나믹 아일랜드, 홈 인디케이터 */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+html,body{height:100%;overscroll-behavior:none}
+body{background:#0b0b0c;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Apple SD Gothic Neo","Pretendard Variable",Pretendard,"Hiragino Sans","Noto Sans KR","Malgun Gothic",sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0}
+
+/* 기기 (화면 크기에 맞춰 이 박스가 축소됨) */
+#device{position:relative;flex:none;width:390px;height:844px;transform-origin:center}
+#phone{position:absolute;inset:0;border-radius:55px;overflow:hidden;background:#000;box-shadow:0 0 0 11px #1d1d1f,0 0 0 13px #3a3a3c,0 30px 90px rgba(0,0,0,.7)}
+.sbtn{position:absolute;width:5px;background:#34343a;border-radius:3px}
+.sbtn::after{content:"";position:absolute;inset:0 -8px}
+.sbtn.pw{right:-19px;top:236px;height:104px;cursor:pointer}
+.sbtn.pw:active{background:#55555c}
+.sbtn.ac{left:-19px;top:158px;height:34px}
+.sbtn.v1{left:-19px;top:214px;height:60px}
+.sbtn.v2{left:-19px;top:288px;height:60px}
+@media(max-width:500px){body{background:#000}#device{width:100vw;height:100dvh}#phone{border-radius:0;box-shadow:none}.sbtn{display:none}}
+
+/* 테마 색 (다크가 기본. 제어 센터의 다크 모드 버튼으로 전환) */
+#phone,#app.fl{--bg:#fff;--bg2:#f2f2f7;--card:#fff;--fg:#000;--fg2:rgba(60,60,67,.6);--fg3:rgba(60,60,67,.3);--sep:rgba(60,60,67,.22);--fill:rgba(118,118,128,.12);--fill2:rgba(118,118,128,.2);--blue:#007aff;--red:#ff3b30;--green:#34c759;--gbg:rgba(255,255,255,.86);--gbd:rgba(0,0,0,.08);--avA:#a8adb8;--avB:#7e838f;--press:#e5e5ea;--bub:#e9e9eb;--glass:rgba(249,249,249,.9)}
+#phone.dark,#app.fd{--bg:#000;--bg2:#000;--card:#1c1c1e;--fg:#fff;--fg2:rgba(235,235,245,.6);--fg3:rgba(235,235,245,.3);--sep:rgba(84,84,88,.6);--fill:rgba(118,118,128,.24);--fill2:rgba(118,118,128,.36);--blue:#0a84ff;--red:#ff453a;--green:#30d158;--gbg:rgba(28,28,30,.88);--gbd:rgba(255,255,255,.12);--avA:#5b5a7c;--avB:#2e2c47;--press:#2c2c2e;--bub:#262629;--glass:rgba(22,22,24,.9)}
+#app.fl{color-scheme:light}
+
+.wall{position:absolute;inset:0;background:#000 url(../img/bg.jpg) center/cover no-repeat}
+.screen{position:absolute;inset:0}
+#dim{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;z-index:95}
+
+/* 상태바 */
+.status{position:absolute;top:0;left:0;right:0;height:54px;padding:8px 30px 0 44px;display:flex;justify-content:space-between;align-items:center;z-index:70;pointer-events:none;color:#fff;transition:color .3s}
+.status.ink{color:#000}
+.sl{display:flex;align-items:center;gap:5px;font-size:17px;font-weight:600;letter-spacing:0}
+.sl svg{width:15px;height:15px;opacity:.9}
+.sl .bell{display:none}.has-silent .sl .bell{display:block}
+#carrier{display:none;font-weight:500}
+.lk #clock{display:none}
+.si{display:flex;gap:6px;align-items:center}
+.si svg{display:block;height:12px}
+.si .plane{display:none;height:14px}
+.air .si .sig,.air .si .wifi{display:none}.air .si .plane{display:block}
+.lp #batf{fill:#ffd60a}
+.island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:122px;height:36px;background:#000;border-radius:20px;z-index:60}
+
+/* 홈 인디케이터 */
+.hbar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:140px;height:5px;border-radius:3px;background:#fff;z-index:80;cursor:pointer;transition:background .3s}
+.hbar::after{content:"";position:absolute;inset:-14px -20px}
+.hbar.ink{background:#000}

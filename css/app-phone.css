@@ -1,0 +1,51 @@
+/* 전화 앱 (iOS 26 스타일: 통화 / 연락처 / 키패드) */
+.pview{position:absolute;inset:0;display:none}.pview.on{display:block}
+.crow{display:flex;align-items:center;gap:11px;padding:0 0 0 16px;cursor:pointer;min-height:70px}
+.crow:active{background:var(--press)}
+.crow .av{width:48px;height:48px;font-size:17px}
+.cb{flex:1;min-width:0;align-self:stretch;display:flex;justify-content:space-between;align-items:center;padding:0 16px 0 0;border-top:.5px solid var(--sep)}
+.cn{font-size:19px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cn.m{color:var(--red)}
+.cs{font-size:15px;color:var(--fg2);display:flex;gap:5px;align-items:center;margin-top:1px}
+.cs svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.cr{display:flex;align-items:center;gap:10px;flex:none}
+.ct{font-size:15px;color:var(--fg2);white-space:nowrap}
+.callb{width:40px;height:40px;border-radius:50%;background:var(--fill);display:flex;align-items:center;justify-content:center;color:var(--blue);flex:none}
+.callb svg{width:19px;height:19px;fill:currentColor}
+.crow:first-child .cb{border-top:0}
+.cempty{padding:60px 0;text-align:center;color:var(--fg2);font-size:15px}
+.gb.on{color:var(--blue)}
+/* 연락처 */
+.mycard{cursor:pointer;display:flex;gap:12px;align-items:center;padding:6px 16px 12px;border-bottom:.5px solid var(--sep)}
+.mycard b{font-size:20px;font-weight:600;display:block}.mycard small{font-size:14px;color:var(--fg2)}
+.sech{padding:6px 16px;font-size:15px;font-weight:600;color:var(--fg2);background:var(--bg);position:sticky;top:92px;z-index:1}
+.ctr{padding:0 0 0 16px;cursor:pointer}
+.ctr:active{background:var(--press)}
+.ctr div{padding:12px 36px 12px 0;font-size:17px;border-bottom:.5px solid var(--sep)}
+.cidx{position:absolute;right:5px;top:130px;bottom:130px;display:flex;flex-direction:column;justify-content:space-between;font-size:11px;font-weight:600;color:var(--blue);z-index:4;width:16px;text-align:center}
+/* 키패드 */
+.kdisp{position:absolute;top:150px;left:0;right:0;text-align:center;font-size:38px;font-weight:300;letter-spacing:.02em;height:48px;color:var(--fg)}
+.kdisp small{display:block;font-size:15px;color:var(--blue);margin-top:4px;font-weight:400}
+.kpad{position:absolute;left:50%;transform:translateX(-50%);top:262px;display:grid;grid-template-columns:repeat(3,78px);gap:14px 22px}
+.kk{height:78px;border-radius:50%;background:var(--fill);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:background .1s}
+.kk:active{background:var(--fill2)}
+.kk b{font-size:34px;font-weight:400;line-height:1}.kk small{font-size:10px;letter-spacing:.14em;font-weight:600;color:var(--fg);margin-top:2px;height:11px}
+.kk.call{background:var(--green);color:#fff;grid-column:2}.kk.call svg{width:34px;height:34px;fill:#fff}
+.kk.del{background:none;color:var(--fg2)}.kk.del svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.kk.sp{background:none;pointer-events:none}
+/* 상세 */
+.cd{text-align:center;padding-top:4px}
+.cd .av{width:100px;height:100px;font-size:38px;margin:0 auto 10px}
+.cd h2{font-size:28px;font-weight:700}
+.acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:18px 16px 18px}
+.acts div{background:var(--card);border-radius:16px;height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-size:11px;color:var(--blue)}
+.acts svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.kv{padding:12px 16px}
+.kv small{display:block;font-size:13px;color:var(--fg2)}
+.kv b{font-size:17px;font-weight:400;color:var(--blue)}
+.lg{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:.5px solid var(--sep);font-size:15px;color:var(--fg2)}
+.lg:last-child{border:0}
+.lg b{display:flex;align-items:center;gap:6px;font-size:17px;font-weight:400;color:var(--fg)}
+.lg b svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lg b.m{color:var(--red)}
+.lg small{font-size:13px;color:var(--fg2)}

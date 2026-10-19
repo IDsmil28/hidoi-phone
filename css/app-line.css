@@ -1,0 +1,77 @@
+/* LINE 앱 */
+.lview{position:absolute;inset:0;background:#fff}
+.lnav{position:absolute;top:0;left:0;right:0;height:96px;padding:54px 16px 0;background:#fff;display:flex;justify-content:space-between;align-items:center;z-index:5;color:#111}
+.lt{font-size:24px;font-weight:700}
+.lic{display:flex;gap:18px}
+.lic svg,.lh svg{width:23px;height:23px;fill:none;stroke:#111;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lsc{padding-top:100px}
+.lsrch{margin:0 16px 8px;height:38px;border-radius:19px;background:#f2f2f4;color:#9a9aa0;display:flex;gap:6px;align-items:center;padding:0 14px;font-size:15px}
+.lav{flex:none;border-radius:50%;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;width:38px;height:38px}
+.lav.sp{background:none}
+.lgrp{width:48px;height:48px;flex:none;display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:18px;overflow:hidden}
+.lgrp i{display:block}
+.lcrow{display:flex;gap:12px;align-items:center;padding:9px 16px;cursor:pointer}
+.lcrow:active{background:#f0f0f2}
+.lcb{flex:1;min-width:0}
+.lct{display:flex;justify-content:space-between;align-items:baseline}
+.lct b{font-size:16px;font-weight:600;color:#111}
+.lct b span{font-weight:400;color:#9a9aa0;font-size:14px}
+.lct i{font-style:normal;font-size:12px;color:#aaa}
+.lcm{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:3px}
+.lcm p{font-size:14px;color:#8a8a90;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lcm em,.lbadge{font-style:normal;min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:#06c755;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.lprof{display:flex;gap:12px;align-items:center;padding:8px 16px 14px;border-bottom:.5px solid #eee}
+.lprof b{font-size:17px}
+.lfh{padding:14px 16px 6px;font-size:13px;color:#8a8a90}
+.lfr{display:flex;gap:12px;align-items:center;padding:7px 16px}
+.lfr b{display:block;font-size:16px;font-weight:500}
+.lfr small{display:block;font-size:13px;color:#9a9aa0;margin-top:1px}
+.ltabs{position:absolute;bottom:0;left:0;right:0;height:88px;padding-top:8px;display:flex;justify-content:space-around;background:rgba(255,255,255,.96);border-top:.5px solid #ddd;z-index:6;font-size:10px;color:#9a9aa0}
+.ltabs>div{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;width:60px;cursor:pointer}
+.ltabs .on{color:#111}
+.ltabs svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ltabs .lbadge{position:absolute;top:-3px;left:34px;background:#ff3b30;min-width:18px;height:18px;font-size:11px;border:2px solid #fff;box-sizing:content-box}
+/* 대화방 */
+.lh{position:absolute;top:0;left:0;right:0;height:96px;padding:54px 14px 0;background:#fff;border-bottom:.5px solid #ddd;display:flex;justify-content:space-between;align-items:center;z-index:5;color:#111}
+.lh .lback{display:inline-flex;align-items:center;gap:6px;min-width:46px;height:30px;color:#111;cursor:pointer}
+.lh .lback svg{width:12px;height:20px;stroke:#111;fill:none}
+.lh .lback .bn{font-style:normal;font-size:17px;font-weight:600;line-height:1}
+.ltitle{position:absolute;left:84px;right:112px;bottom:11px;height:28px;display:flex;align-items:center;justify-content:center;gap:5px;font-size:17px;font-weight:600;white-space:nowrap}
+.ltitle span{overflow:hidden;text-overflow:ellipsis}
+.ltitle small{font-weight:400;color:#9a9aa0;font-size:15px;flex:none}
+.lbody{position:absolute;inset:0;overflow-y:auto;padding:106px 10px 96px;background:#7e98c0;scrollbar-width:none}
+.lbody::-webkit-scrollbar{display:none}
+.lsys{align-self:center;width:max-content;margin:12px auto 6px;padding:3px 12px;border-radius:12px;background:rgba(0,0,0,.22);color:#fff;font-size:12px}
+.lrow{display:flex;gap:8px;align-items:flex-end;margin-top:3px}
+.lrow.first{margin-top:12px}
+.lrow.me{justify-content:flex-end;gap:6px}
+.lrow.you{align-items:flex-start}
+.lcol{display:flex;flex-direction:column;gap:3px;max-width:76%}
+.lname{font-size:12px;color:#fff;opacity:.92;margin-left:2px}
+.lline{display:flex;gap:6px;align-items:flex-end}
+.lbub{position:relative;max-width:240px;padding:8px 12px;border-radius:17px;font-size:15px;line-height:1.3;white-space:pre-wrap;word-break:break-word;color:#000}
+.lrow.me .lbub{background:#85e249}
+.lrow.you .lbub{background:#fff}
+.lrow.me.first .lbub{border-top-right-radius:4px}
+.lrow.you.first .lbub{border-top-left-radius:4px}
+.lrow.me.first .lbub::before{content:"";position:absolute;top:0;right:-8px;border-left:10px solid #85e249;border-bottom:10px solid transparent}
+.lrow.you.first .lbub::before{content:"";position:absolute;top:0;left:-8px;border-right:10px solid #fff;border-bottom:10px solid transparent}
+.lstk{font-size:64px;line-height:1.1;padding:2px 4px}
+.lmeta{font-size:10.5px;line-height:1.25;color:#eef2f8;white-space:nowrap;text-align:right;opacity:.95}
+.lrow.you .lmeta{text-align:left}
+.linbar{position:absolute;bottom:0;left:0;right:0;height:88px;padding:8px 12px 0;background:#fff;border-top:.5px solid #ddd;display:flex;gap:12px;align-items:flex-start;z-index:5}
+.linbar svg{width:26px;height:26px;fill:none;stroke:#8a8a90;stroke-width:1.8;stroke-linecap:round;margin-top:6px;flex:none}
+.lfield{flex:1;height:38px;border-radius:19px;background:#f0f0f2;display:flex;justify-content:flex-end;align-items:center;padding:0 10px}
+.lfield svg{margin:0;width:22px;height:22px}
+.lsrch svg{width:18px;height:18px;fill:none;stroke:#9a9aa0;stroke-width:2;stroke-linecap:round;flex:none}
+
+/* 입력창 / 보내기 */
+.lin{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;font:inherit;font-size:16px;color:#111;padding:0 4px 0 6px}
+.lfield{justify-content:space-between}
+.lsnd{display:none;width:38px;height:38px;border-radius:50%;background:#06c755;align-items:center;justify-content:center;flex:none;cursor:pointer;margin-top:0}
+.lsnd svg{stroke:#fff;fill:#fff;width:20px;height:20px;margin:0}
+.lmic{display:flex}
+.linbar.has .lsnd{display:flex}.linbar.has .lmic{display:none}
+.lfield{min-width:0;flex:1 1 0}.lin{width:0}
+
+.lav,.lgrp{position:relative;overflow:hidden}

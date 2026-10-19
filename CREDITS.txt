@@ -1,0 +1,3 @@
+유튜브 앱 썸네일은 Wikimedia Commons 이미지를 외부 링크로 불러옵니다 (js/data/youtube.js, js/apps/youtube.js 참고).
+사용 전 각 파일 페이지에서 라이선스와 저작자 표시를 확인하세요. 링크가 깨지면 이름 타일로 대체 표시됩니다.
+YouTube/Instagram/Discord 아이콘은 실제 로고가 아닌 임의 도형입니다.

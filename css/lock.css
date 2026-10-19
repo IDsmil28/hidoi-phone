@@ -1,0 +1,38 @@
+/* 잠금화면 */
+#lock{z-index:40;color:#fff;background:#000 url(../img/bg.jpg) center/cover no-repeat;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .35s;touch-action:none}
+#lock.gone{transform:translateY(-105%);opacity:0;pointer-events:none}
+#lock .lico{position:absolute;top:62px;left:50%;transform:translateX(-50%)}
+#ldate{position:absolute;top:84px;width:100%;text-align:center;font-size:21px;font-weight:600;letter-spacing:-.01em;opacity:.95;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+#ltime{position:absolute;top:104px;width:100%;text-align:center;font-size:112px;font-weight:500;letter-spacing:-.02em;line-height:1;
+ font-family:"SF Pro Rounded",ui-rounded,"Nunito",-apple-system,BlinkMacSystemFont,sans-serif;
+ color:transparent;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.3) 50%,rgba(255,255,255,.44) 100%);
+ -webkit-background-clip:text;background-clip:text;-webkit-text-stroke:1.2px rgba(255,255,255,.34);
+ filter:drop-shadow(0 1px 0 rgba(255,255,255,.18)) drop-shadow(0 4px 10px rgba(0,0,0,.35))}
+#lwg{position:absolute;top:212px;left:34px;right:30px;display:grid;grid-template-columns:1.12fr 1fr;gap:14px;pointer-events:none}
+.lw{font-size:15px;line-height:1.32;color:rgba(255,255,255,.94);letter-spacing:-.01em;text-shadow:0 1px 6px rgba(0,0,0,.25);white-space:nowrap}
+.lw b{font-weight:600}
+.lw .l1{display:flex;align-items:center;gap:5px;font-size:16px}
+.lw .wx{width:26px;height:20px;flex:none}
+.lw .dim{color:rgba(255,255,255,.62)}
+.lbat{display:flex;gap:8px}
+.lbat .bar{position:relative;width:3.5px;border-radius:2px;background:rgba(255,255,255,.28);overflow:hidden;flex:none}
+.lbat .bar i{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:2px}
+#nstack{position:absolute;left:8px;right:8px;bottom:128px;display:flex;flex-direction:column;gap:6px}
+#nstack .notif:nth-child(n+5){display:none}
+.notif{display:flex;gap:11px;padding:12px 14px;border-radius:24px;background:rgba(70,70,76,.42);backdrop-filter:blur(30px) saturate(1.5);-webkit-backdrop-filter:blur(30px) saturate(1.5);cursor:pointer;transition:transform .15s}
+.notif:active{transform:scale(.98)}
+.ni{position:relative;width:38px;height:38px;border-radius:9px;overflow:hidden;flex:none}
+.ni svg,.icon svg{width:100%;height:100%;display:block}
+.nt{flex:1;min-width:0}
+.nh{display:flex;justify-content:space-between;align-items:baseline}
+.nh b{font-size:15px;font-weight:600}.nh span{font-size:13px;opacity:.6}
+.nb{font-size:15px;line-height:1.25;opacity:.95;margin-top:1px}
+.qb{position:absolute;bottom:46px;width:50px;height:50px;border-radius:50%;background:rgba(50,50,54,.5);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+.qb.l{left:46px}.qb.r{right:46px}
+.qb.on{background:#fff}.qb.on svg{fill:#000}
+.hint{position:absolute;bottom:24px;width:100%;text-align:center;font-size:12px;opacity:.55;pointer-events:none}
+#phone.lk #app.open{opacity:0;pointer-events:none;transform:scale(.97)}
+/* 알림 배너 (잠금 해제 상태에서 위에서 내려옴) */
+#banner{position:absolute;left:8px;right:8px;top:56px;z-index:90;transform:translateY(-150%) scale(.95);opacity:0;pointer-events:none;transition:transform .55s cubic-bezier(.2,.9,.3,1.15),opacity .3s;color:#fff}
+#banner.show{transform:none;opacity:1;pointer-events:auto}
+#banner .notif{background:rgba(52,52,58,.72);box-shadow:0 8px 28px rgba(0,0,0,.35)}
